@@ -1,3 +1,3 @@
 ## Synthetic Two-Way Highway Scenario for SUMO
 
-This simulation is constructed on top the one-way *../highway-scenario* via also adding traffic in the reverse direction. The road network, traffic demands and all configurable settings are exactly same for each direction. So, check the first scenario for more details.
+This simulation is created by adding traffic in reverse direction to the one-way highway traffic scenario. The road network, traffic demands and all configurable settings are exactly same for each direction. Check [highway-synthetic](https://github.com/kctnky/sumo-traffic/tree/master/highway-synthetic) for more details.
