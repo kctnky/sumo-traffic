@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+   <inductionLoop id="ILD_E1_0" lane="E1_0" pos="900" freq="3600" file="out/induction-loop-data.E1_0.out.xml" friendlyPos="false"/>
+   <inductionLoop id="ILD_E1_1" lane="E1_1" pos="900" freq="3600" file="out/induction-loop-data.E1_1.out.xml" friendlyPos="false"/>
+   <inductionLoop id="ILD_E1_2" lane="E1_2" pos="900" freq="3600" file="out/induction-loop-data.E1_2.out.xml" friendlyPos="false"/>   
+   <inductionLoop id="ILD_E29_0" lane="E29_0" pos="500" freq="3600" file="out/induction-loop-data.E29_0.out.xml" friendlyPos="false"/>
+   <inductionLoop id="ILD_E29_1" lane="E29_1" pos="500" freq="3600" file="out/induction-loop-data.E29_1.out.xml" friendlyPos="false"/>
+   <inductionLoop id="ILD_E29_2" lane="E29_2" pos="500" freq="3600" file="out/induction-loop-data.E29_2.out.xml" friendlyPos="false"/>
+</additional>
