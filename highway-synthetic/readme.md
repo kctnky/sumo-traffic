@@ -1,4 +1,4 @@
-## Synthetic Highway Scenario for SUMO
+## Highway Traffic (Unidirectional)
 
 ### Road network
 

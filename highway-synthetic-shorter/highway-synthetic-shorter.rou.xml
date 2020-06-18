@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+	<!-- Define Vehicle Types -->
+	<vType id="vNormalCar" vClass="passenger" color="yellow" length="5.0" minGap="2.5" accel="2.6" decel="4.5" maxSpeed="55.55" speedFactor="0.9" speedDev="0.2" sigma="0.4" />
+    <vType id="vFastCar" vClass="passenger" color="red" length="5.0" minGap="2.5" accel="3.5" decel="6.0" maxSpeed="66.66" speedFactor="1.1" speedDev="0.1" sigma="0.2" />
+    <vType id="vBus" vClass="coach" color="blue" length="12.0" minGap="5.0" accel="2.0" decel="3.5" maxSpeed="40" speedFactor="0.8" speedDev="0.1" sigma="0.1" />
+    <vType id="vTruck" vClass="trailer" color="green"  length="10.0" minGap="5.0" accel="1.7" decel="3.0" maxSpeed="30" speedFactor="0.7" speedDev="0.1" sigma="0.1" />
+	
+	<!-- Define Vehicle Flows
+			Poisson generated vehicles such that lambda changes in every hour with respect to the desired traffic demand
+			Total volume will be %40 NormalCar, %30 FastCar, %10 Bus, %20 Truck -->	
+		
+	<!-- Day #1 00:00-01:00  -->
+	<flow id="T0_NormalCar" type="vNormalCar" begin="0" end="3599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0996" />
+	<flow id="T0_FastCar" type="vFastCar" begin="0" end="3599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0747" />
+	<flow id="T0_Bus" type="vBus" begin="0" end="3599" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0249" />
+	<flow id="T0_Truck" type="vTruck" begin="0" end="3599" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0498" />
+		
+	<!-- Day #1 01:00-02:00  -->
+	<flow id="T1_NormalCar" type="vNormalCar" begin="3600" end="7199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0672" />
+	<flow id="T1_FastCar" type="vFastCar" begin="3600" end="7199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0504" />
+	<flow id="T1_Bus" type="vBus" begin="3600" end="7199" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0168" />
+	<flow id="T1_Truck" type="vTruck" begin="3600" end="7199" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0336" />
+	
+	<!-- Day #1 02:00-03:00 -->
+	<flow id="T2_NormalCar" type="vNormalCar" begin="7200" end="10799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0264" />
+	<flow id="T2_FastCar" type="vFastCar" begin="7200" end="10799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0198" />
+	<flow id="T2_Bus" type="vBus" begin="7200" end="10799" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0066" />
+	<flow id="T2_Truck" type="vTruck" begin="7200" end="10799" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0132" />
+	
+	<!-- Day #1 03:00-04:00 -->
+	<flow id="T3_NormalCar" type="vNormalCar" begin="10800" end="14399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0336" />
+	<flow id="T3_FastCar" type="vFastCar" begin="10800" end="14399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0252" />
+	<flow id="T3_Bus" type="vBus" begin="10800" end="14399" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0084" />
+	<flow id="T3_Truck" type="vTruck" begin="10800" end="14399" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0168" />
+	
+	<!-- Day #1 04:00-05:00 -->
+	<flow id="T4_NormalCar" type="vNormalCar" begin="14400" end="17999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0396" />
+	<flow id="T4_FastCar" type="vFastCar" begin="14400" end="17999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0297" />
+	<flow id="T4_Bus" type="vBus" begin="14400" end="17999" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0099" />
+	<flow id="T4_Truck" type="vTruck" begin="14400" end="17999" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0198" />
+	
+	<!-- Day #1 05:00-06:00 -->
+	<flow id="T5_NormalCar" type="vNormalCar" begin="18000" end="21599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0936" />
+	<flow id="T5_FastCar" type="vFastCar" begin="18000" end="21599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0702" />
+	<flow id="T5_Bus" type="vBus" begin="18000" end="21599" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0234" />
+	<flow id="T5_Truck" type="vTruck" begin="18000" end="21599" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0468" />
+	
+	<!-- Day #1 06:00-07:00 -->
+	<flow id="T6_NormalCar" type="vNormalCar" begin="21600" end="25199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2004" />
+	<flow id="T6_FastCar" type="vFastCar" begin="21600" end="25199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1503" />
+	<flow id="T6_Bus" type="vBus" begin="21600" end="25199" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0501" />
+	<flow id="T6_Truck" type="vTruck" begin="21600" end="25199" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1002" />
+	
+	<!-- Day #1 07:00-08:00 -->
+	<flow id="T7_NormalCar" type="vNormalCar" begin="25200" end="28799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4332" />
+	<flow id="T7_FastCar" type="vFastCar" begin="25200" end="28799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3249" />
+	<flow id="T7_Bus" type="vBus" begin="25200" end="28799" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1083" />
+	<flow id="T7_Truck" type="vTruck" begin="25200" end="28799" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2166" />
+	
+	<!-- Day #1 08:00-09:00 -->
+	<flow id="T8_NormalCar" type="vNormalCar" begin="28800" end="32399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.6000" />
+	<flow id="T8_FastCar" type="vFastCar" begin="28800" end="32399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4500" />
+	<flow id="T8_Bus" type="vBus" begin="28800" end="32399" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1500" />
+	<flow id="T8_Truck" type="vTruck" begin="28800" end="32399" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.3000" />
+	
+	<!-- Day #1 09:00-10:00 -->
+	<flow id="T9_NormalCar" type="vNormalCar" begin="32400" end="35999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.5664" />
+	<flow id="T9_FastCar" type="vFastCar" begin="32400" end="35999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4248" />
+	<flow id="T9_Bus" type="vBus" begin="32400" end="35999" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1416" />
+	<flow id="T9_Truck" type="vTruck" begin="32400" end="35999" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2832" />
+	
+	<!-- Day #1 10:00-11:00 -->
+	<flow id="T10_NormalCar" type="vNormalCar" begin="36000" end="39599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3000" />
+	<flow id="T10_FastCar" type="vFastCar" begin="36000" end="39599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2250" />
+	<flow id="T10_Bus" type="vBus" begin="36000" end="39599" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0750" />
+	<flow id="T10_Truck" type="vTruck" begin="36000" end="39599" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1500" />
+	
+	<!-- Day #1 11:00-12:00 -->
+	<flow id="T11_NormalCar" type="vNormalCar" begin="39600" end="43199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1596" />
+	<flow id="T11_FastCar" type="vFastCar" begin="39600" end="43199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1197" />
+	<flow id="T11_Bus" type="vBus" begin="39600" end="43199" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0399" />
+	<flow id="T11_Truck" type="vTruck" begin="39600" end="43199" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0798" />
+	
+	<!-- Day #1 12:00-13:00 -->
+	<flow id="T12_NormalCar" type="vNormalCar" begin="43200" end="46799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2004" />
+	<flow id="T12_FastCar" type="vFastCar" begin="43200" end="46799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1503" />
+	<flow id="T12_Bus" type="vBus" begin="43200" end="46799" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0501" />
+	<flow id="T12_Truck" type="vTruck" begin="43200" end="46799" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1002" />
+	
+	<!-- Day #1 13:00-14:00 -->
+	<flow id="T13_NormalCar" type="vNormalCar" begin="46800" end="50399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4272" />
+	<flow id="T13_FastCar" type="vFastCar" begin="46800" end="50399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3204" />
+	<flow id="T13_Bus" type="vBus" begin="46800" end="50399" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1068" />
+	<flow id="T13_Truck" type="vTruck" begin="46800" end="50399" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2136" />
+	
+	<!-- Day #1 14:00-15:00 -->
+	<flow id="T14_NormalCar" type="vNormalCar" begin="50400" end="53999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3468" />
+	<flow id="T14_FastCar" type="vFastCar" begin="50400" end="53999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2601" />
+	<flow id="T14_Bus" type="vBus" begin="50400" end="53999" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0867" />
+	<flow id="T14_Truck" type="vTruck" begin="50400" end="53999" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1734" />
+	
+	<!-- Day #1 15:00-16:00 -->
+	<flow id="T15_NormalCar" type="vNormalCar" begin="54000" end="57599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2136" />
+	<flow id="T15_FastCar" type="vFastCar" begin="54000" end="57599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1602" />
+	<flow id="T15_Bus" type="vBus" begin="54000" end="57599" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0534" />
+	<flow id="T15_Truck" type="vTruck" begin="54000" end="57599" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1068" />
+	
+	<!-- Day #1 16:00-17:00 -->
+	<flow id="T16_NormalCar" type="vNormalCar" begin="57600" end="61199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2328" />
+	<flow id="T16_FastCar" type="vFastCar" begin="57600" end="61199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1746" />
+	<flow id="T16_Bus" type="vBus" begin="57600" end="61199" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0582" />
+	<flow id="T16_Truck" type="vTruck" begin="57600" end="61199" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1164" />
+	
+	<!-- Day #1 17:00-18:00 -->
+	<flow id="T17_NormalCar" type="vNormalCar" begin="61200" end="64799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3864" />
+	<flow id="T17_FastCar" type="vFastCar" begin="61200" end="64799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2898" />
+	<flow id="T17_Bus" type="vBus" begin="61200" end="64799" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0966" />
+	<flow id="T17_Truck" type="vTruck" begin="61200" end="64799" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1932" />
+	
+	<!-- Day #1 18:00-19:00 -->
+	<flow id="T18_NormalCar" type="vNormalCar" begin="64800" end="68399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.5664" />
+	<flow id="T18_FastCar" type="vFastCar" begin="64800" end="68399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4248" />
+	<flow id="T18_Bus" type="vBus" begin="64800" end="68399" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1416" />
+	<flow id="T18_Truck" type="vTruck" begin="64800" end="68399" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2832" />
+	
+	<!-- Day #1 19:00-20:00 -->
+	<flow id="T19_NormalCar" type="vNormalCar" begin="68400" end="71999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.5604" />
+	<flow id="T19_FastCar" type="vFastCar" begin="68400" end="71999" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4203" />
+	<flow id="T19_Bus" type="vBus" begin="68400" end="71999" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1401" />
+	<flow id="T19_Truck" type="vTruck" begin="68400" end="71999" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2802" />
+	
+	<!-- Day #1 20:00-21:00 -->
+	<flow id="T20_NormalCar" type="vNormalCar" begin="72000" end="75599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.4668" />
+	<flow id="T20_FastCar" type="vFastCar" begin="72000" end="75599" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.3501" />
+	<flow id="T20_Bus" type="vBus" begin="72000" end="75599" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.1167" />
+	<flow id="T20_Truck" type="vTruck" begin="72000" end="75599" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.2334" />
+	
+	<!-- Day #1 21:00-22:00 -->
+	<flow id="T21_NormalCar" type="vNormalCar" begin="75600" end="79199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.2004" />
+	<flow id="T21_FastCar" type="vFastCar" begin="75600" end="79199" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1503" />
+	<flow id="T21_Bus" type="vBus" begin="75600" end="79199" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0501" />
+	<flow id="T21_Truck" type="vTruck" begin="75600" end="79199" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.1002" />
+	
+	<!-- Day #1 22:00-23:00 -->
+	<flow id="T22_NormalCar" type="vNormalCar" begin="79200" end="82799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1668" />
+	<flow id="T22_FastCar" type="vFastCar" begin="79200" end="82799" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1251" />
+	<flow id="T22_Bus" type="vBus" begin="79200" end="82799" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0417" />
+	<flow id="T22_Truck" type="vTruck" begin="79200" end="82799" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0834" />
+	
+	<!-- Day #1 23:00-24:00 -->
+	<flow id="T23_NormalCar" type="vNormalCar" begin="82800" end="86399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.1332" />
+	<flow id="T23_FastCar" type="vFastCar" begin="82800" end="86399" from="E0" to="E6" departLane="best" departPos="last" departSpeed="max" probability="0.0999" />
+	<flow id="T23_Bus" type="vBus" begin="82800" end="86399" from="E0" to="E6" departLane="1" departPos="last" departSpeed="max" probability="0.0333" />
+	<flow id="T23_Truck" type="vTruck" begin="82800" end="86399" from="E0" to="E6" departLane="0" departPos="last" departSpeed="max" probability="0.0666" />
+
+</routes>
