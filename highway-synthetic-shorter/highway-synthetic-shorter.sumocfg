@@ -15,7 +15,7 @@
 	
 	<time>
 		<begin value="0"/>
-        <end value="86400"/>
+        <end value="14700"/>
 		<step-length value="0.01"/>
 	</time>
 	
@@ -27,7 +27,7 @@
 		<fcd-output value="out/floating-car-data.out.xml" />
 		<fcd-output.acceleration value="1" />
 		<fcd-output.geo value="1" />
-		<device.fcd.probability value="0.1" />
+		<device.fcd.probability value="0.01" />
 	</output> -->
 	
 </configuration>
