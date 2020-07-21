@@ -4,8 +4,8 @@
 
 	<input>
 		<net-file value="highway-synthetic.net.xml"/>
-		<route-files value="highway-synthetic-8.00-9.00.rou.xml"/>
-		<!-- <additional-files value="induction-loop.add.xml"/> -->
+		<route-files value="highway-synthetic-2way.rou.xml"/>
+		<!-- <additional-files value="induction-loop-2way.add.xml"/> -->
 	</input>
 	
 	<processing>
@@ -15,7 +15,7 @@
 	
 	<time>
 		<begin value="0"/>
-        <end value="3600"/>
+        <end value="86400"/>
 		<step-length value="0.01"/>
 	</time>
 	

@@ -1,12 +1,14 @@
-## Highway Traffic
+## Highway Traffic (Shorter)
 
 ### Road network
 
-Road network is composed of a single double-way road having 3 lanes in each direction. Total length is about 36.1 kilometers and speed limit is 130 km/h. Reverse directions are seperated from each other with a green area. Each lane is by default 3.2 meters in width for conducting sublane simulations.
+Road network is composed of a single double-way road having 3 lanes in each direction. Total length is about 4 kilometers and speed limit is 130 km/h. Reverse directions are seperated from each other with a green area. Each lane is by default 3.2 meters in width for conducting sublane simulations.
 
 ### Traffic demand
 
-Traffic demand is composed for a single day such that vehicle generation rates differ in different times of the day. Vehicles are summoned at the first road segment in its direction and start moving with respect to the types defined for them. A vehicle leaves the simulation when it reaches at the last road segment. 
+Traffic demand is composed for a single day such that vehicle generation rates differ in different times of the day. However, total simulation time is compressed such that shape of the vehicle generation plot is kept as same with the original plot in the highway scenario but the time axis is scaled by 6, i.e. one hour lasts 600 seconds, in order to finish simulation faster. 
+
+Vehicles are summoned at the first road segment in its direction and start moving with respect to the types defined for them. A vehicle leaves the simulation when it reaches at the last road segment. 
 
 #### Vehicle types
 

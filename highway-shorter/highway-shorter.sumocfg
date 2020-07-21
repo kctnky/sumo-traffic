@@ -3,8 +3,8 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
 	<input>
-		<net-file value="highway-synthetic.net.xml"/>
-		<route-files value="highway-synthetic-2.00-3.00.rou.xml"/>
+		<net-file value="highway-shorter.net.xml"/>
+		<route-files value="highway-shorter.rou.xml"/>
 		<!-- <additional-files value="induction-loop.add.xml"/> -->
 	</input>
 	
@@ -15,12 +15,12 @@
 	
 	<time>
 		<begin value="0"/>
-        <end value="3600"/>
+        <end value="14700"/>
 		<step-length value="0.01"/>
 	</time>
 	
 	<gui_only>
-        <gui-settings-file value="highway-synthetic.view.xml"/>
+        <gui-settings-file value="highway-shorter.view.xml"/>
     </gui_only>
 	
 	<!-- <output>
