@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+    <inductionLoop id="ildE10F" lane="E1_0" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE11F" lane="E1_1" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE12F" lane="E1_2" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE120F" lane="E12_0" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE121F" lane="E12_1" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE122F" lane="E12_2" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE120B" lane="-E12_0" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE121B" lane="-E12_1" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE122B" lane="-E12_2" pos="0" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE10B" lane="-E1_0" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE11B" lane="-E1_1" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+    <inductionLoop id="ildE12B" lane="-E1_2" pos="1300" freq="60" file="out/induction-loop-data.out.xml" friendlyPos="false"/>
+</additional>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <!-- Define Vehicle Types -->
+    <vType id="vNormal" vClass="passenger" color="yellow" length="5.0" minGap="2.5" accel="2.6" decel="4.5" maxSpeed="55.55" speedFactor="0.9" speedDev="0.2" sigma="0.5" laneChangeModel="SL2015" minGapLat="0.8" lcSpeedGain="100.0" lcKeepRight="1.0" lcPushy="0.1" lcPushyGap="0.8" lcAssertive="1" lcImpatience="0.5" lcTimeToImpatience="60" />
+    <vType id="vFast" vClass="passenger" color="red" length="5.0" minGap="2.5" accel="3.5" decel="5.0" maxSpeed="66.66" speedFactor="1.1" speedDev="0.15" sigma="0.5" laneChangeModel="SL2015" minGapLat="0.8" lcSpeedGain="100.00" lcKeepRight="1.0" lcPushy="0.1" lcPushyGap="0.8" lcAssertive="1" lcImpatience="0.5" lcTimeToImpatience="60" />
+    <vType id="vBus" vClass="coach" color="blue" length="12.0" minGap="5.0" accel="1.5" decel="1.2" maxSpeed="40" speedFactor="0.7" speedDev="0.1" sigma="0.5" laneChangeModel="SL2015" minGapLat="0.8" lcSpeedGain="1.0" lcKeepRight="100.0" lcPushy="0.1" lcPushyGap="0.8" lcAssertive="1" lcImpatience="0" lcTimeToImpatience="120" />
+    <vType id="vTruck" vClass="trailer" color="green"  length="10.0" minGap="5.0" accel="1.0" decel="0.9" maxSpeed="30" speedFactor="0.6" speedDev="0.1" sigma="0.5" laneChangeModel="SL2015" minGapLat="0.8" lcSpeedGain="1.0" lcKeepRight="100.0" lcPushy="0.1" lcPushyGap="0.8" lcAssertive="1" lcImpatience="0" lcTimeToImpatience="120" />
+    
+    <!-- Define Routes -->
+    <route id="rForward" edges="E0 E1 E2 E3 E4 E5 E6 E7 E8 E9 E10 E11 E12 E13" />
+    <route id="rBackward" edges="-E13 -E12 -E11 -E10 -E9 -E8 -E7 -E6 -E5 -E4 -E3 -E2 -E1 -E0" />
+    
+    <!-- Poisson generated vehicles such that vehicle generation rate is divided into four vehicle types: %40 NormalCar, %40 FastCar, %10 Bus, %10 Truck -->
+    
+    <!-- Define Vehicle Flows: Forward direction -->
+    <flow id="fNormalForward" type="vNormal" route="rForward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.52" />
+    <flow id="fFastForward" type="vFast" route="rForward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.52" />
+    <flow id="fBusForward" type="vBus" route="rForward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.13" />
+    <flow id="fTruckForward" type="vTruck" route="rForward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.13" />
+    
+    <!-- Define Vehicle Flows: Backward direction -->
+    <flow id="fNormalBackward" type="vNormal" route="rBackward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.52" />
+    <flow id="fFastBackward" type="vFast" route="rBackward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.52" />
+    <flow id="fBusBackward" type="vBus" route="rBackward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.13" />
+    <flow id="fTruckBackward" type="vTruck" route="rBackward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.13" />
+    
+</routes>
