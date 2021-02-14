@@ -15,15 +15,15 @@
     <!-- Poisson generated vehicles such that vehicle generation rate is divided into four vehicle types: %40 NormalCar, %40 FastCar, %10 Bus, %10 Truck -->
     
     <!-- Define Vehicle Flows: Forward direction -->
-    <flow id="fNormalForward" type="vNormal" route="rForward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
-    <flow id="fFastForward" type="vFast" route="rForward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
-    <flow id="fBusForward" type="vBus" route="rForward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
-    <flow id="fTruckForward" type="vTruck" route="rForward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
+    <flow id="fNormalForward" type="vNormal" route="rForward" begin="0" end="3600" departEdge="random" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
+    <flow id="fFastForward" type="vFast" route="rForward" begin="0" end="3600" departEdge="random" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
+    <flow id="fBusForward" type="vBus" route="rForward" begin="0" end="3600" departEdge="random" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
+    <flow id="fTruckForward" type="vTruck" route="rForward" begin="0" end="3600" departEdge="random" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
     
     <!-- Define Vehicle Flows: Backward direction -->
-    <flow id="fNormalBackward" type="vNormal" route="rBackward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
-    <flow id="fFastBackward" type="vFast" route="rBackward" begin="0" end="3600" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
-    <flow id="fBusBackward" type="vBus" route="rBackward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
-    <flow id="fTruckBackward" type="vTruck" route="rBackward" begin="0" end="3600" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
+    <flow id="fNormalBackward" type="vNormal" route="rBackward" begin="0" end="3600" departEdge="random" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
+    <flow id="fFastBackward" type="vFast" route="rBackward" begin="0" end="3600" departEdge="random" departLane="best" departPos="random_free" departSpeed="max" probability="0.28" />
+    <flow id="fBusBackward" type="vBus" route="rBackward" begin="0" end="3600" departEdge="random" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
+    <flow id="fTruckBackward" type="vTruck" route="rBackward" begin="0" end="3600" departEdge="random" departLane="first" departPos="random_free" departSpeed="max" probability="0.07" />
     
 </routes>
