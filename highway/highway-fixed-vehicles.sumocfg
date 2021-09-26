@@ -4,7 +4,7 @@
 
     <input>
         <net-file value="highway.net.xml"/>
-        <route-files value="highway-mu0.5.rou.xml"/>
+        <route-files value="highway-fixed-vehicles.rou.xml"/>
         <!-- <additional-files value="induction-loop.add.xml"/> -->
     </input>
     
@@ -15,7 +15,7 @@
     
     <time>
         <begin value="0"/>
-        <end value="3600"/>
+        <end value="1200"/>
         <step-length value="0.01"/>
     </time>
     
